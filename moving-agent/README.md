@@ -1,55 +1,67 @@
-# 🚚 AI Moving Agent Demo
+# 🚚 AI Moving Quote Agent
 
-Live browser automation that finds movers and schedules appointments like a human.
+An intelligent moving quote system that uses AWS Bedrock AI to parse natural language requests and provide personalized moving quotes with PDF reports.
+
+## ✨ Features
+
+- **Natural Language Processing**: Describe your move in plain English
+- **AI-Powered Analysis**: AWS Bedrock Claude 4.0 Sonnet extracts customer information
+- **Multi-Company Quotes**: Compare prices from multiple moving companies
+- **Professional Reports**: Generate and download PDF analysis reports
+- **Modern UI**: Clean Streamlit interface with chat-style interaction
 
 ## 🚀 Quick Start
 
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
-playwright install chromium
-```
+1. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 2. Run Live Demo
-```bash
-python demo.py
-```
+2. **Configure AWS Credentials**
+   ```bash
+   aws configure
+   # or set environment variables:
+   # AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_DEFAULT_REGION
+   ```
 
-## 🎬 What You'll See
+3. **Run the Demo**
+   ```bash
+   python run_demo.py
+   ```
 
-The demo opens a **visible browser window** and shows:
+4. **Open Browser**
+   - Navigate to: http://localhost:8501
+   - Enter your moving details naturally
+   - Get instant quotes and analysis
 
-1. **🔍 Google Search** - Searches for moving companies
-2. **🖱️ Website Navigation** - Clicks on company website  
-3. **📋 Form Detection** - Finds contact/quote forms
-4. **✍️ Auto-Fill** - Types customer information
-5. **🚀 Form Submission** - Submits appointment request
-6. **✅ Confirmation** - Shows success message
-
-## 🎯 Demo Features
-
-- **Visible Browser**: Watch every action in real-time
-- **Slow Motion**: 1.5-second delays for clarity
-- **Smart Form Filling**: Adapts to different website layouts
-- **Real-time Commentary**: Step-by-step progress updates
-
-## 📋 Demo Flow
+## 💬 Example Input
 
 ```
-User Input → Google Search → Company Website → Contact Form → Submit → Confirmation
+"Hi, I'm Sarah Johnson, moving my 2-bedroom apartment from Boston to Miami in March. 
+Email: sarah@email.com, phone: 555-0123. Need quotes for a long-distance move."
 ```
 
-## 🔧 Customization
+## 📁 Files
 
-Edit `demo.py` to:
-- Change customer information
-- Add more form field selectors
-- Modify search queries
-- Adjust timing delays
+- `streamlit_app.py` - Main Streamlit application
+- `final_quote_agent.py` - AI processing and PDF generation
+- `run_demo.py` - Demo launcher script
+- `requirements.txt` - Python dependencies
 
-## 🎪 Perfect for Demos
+## 🤖 AI Technology
 
-- **Sales Presentations**: Show AI capabilities
-- **Technical Demos**: Demonstrate automation
-- **Training**: Teach browser automation
-- **Proof of Concept**: Validate AI agents
+- **AWS Bedrock**: Claude 4.0 Sonnet for natural language understanding
+- **Smart Parsing**: Extracts names, contacts, locations, dates automatically
+- **Quote Analysis**: Intelligent price comparison and recommendations
+- **Report Generation**: Professional PDF reports with insights
+
+## 🎯 Demo Flow
+
+1. **Input**: Natural language moving request
+2. **Parse**: AI extracts customer information
+3. **Quote**: Get estimates from multiple companies
+4. **Compare**: Side-by-side price analysis
+5. **Report**: Download professional PDF summary
+
+---
+*Powered by AWS Bedrock AI • Built with Streamlit*
